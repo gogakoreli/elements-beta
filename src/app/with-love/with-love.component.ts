@@ -1,9 +1,15 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+    Component,
+    Input,
+    OnInit,
+    ViewEncapsulation
+    } from '@angular/core';
 
 @Component({
     selector: 'with-love',
     templateUrl: './with-love.component.html',
     styleUrls: ['./with-love.component.scss'],
+    encapsulation: ViewEncapsulation.Native,
 })
 export class WithLoveComponent implements OnInit {
     @Input() public name: string;

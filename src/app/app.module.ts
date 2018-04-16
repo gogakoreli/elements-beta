@@ -1,21 +1,27 @@
-import { Injector, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { Injector, NgModule } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 import { BrowserModule } from '@angular/platform-browser';
+import { BoxComponent } from './box/box.component';
 import { WithLoveComponent } from './with-love/with-love.component';
 
-export const AngularElements = [WithLoveComponent];
+export const AngularElements = [WithLoveComponent, BoxComponent];
 
 @NgModule({
-    declarations: [...AngularElements],
+    declarations: [...AngularElements, BoxComponent],
     imports: [BrowserModule],
     entryComponents: [...AngularElements],
 })
-export class AppModule {
+export class ElementsModule {
     constructor(private injector: Injector) {
-        const customElement = createCustomElement(WithLoveComponent, {
+        const withLoveElement = createCustomElement(WithLoveComponent, {
             injector,
         });
-        customElements.define('with-love', customElement);
+        customElements.define('with-love', withLoveElement);
+
+        const boxElement = createCustomElement(BoxComponent, {
+            injector,
+        });
+        customElements.define('ct-box', boxElement);
     }
 
     ngDoBootstrap() {}
