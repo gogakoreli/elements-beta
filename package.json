@@ -1,7 +1,25 @@
 {
     "name": "elements-beta",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "license": "MIT",
+    "author": "Goga Koreli",
+    "description":
+        "Experimental Angular Element library to demonstrate Web Component usage",
+    "homepage": "https://github.com/gogakoreli/elements-beta",
+    "keywords": [
+        "Angular",
+        "Custom",
+        "Element",
+        "Web",
+        "Component",
+        "AngularElements",
+        "CustomElements",
+        "WebComponents"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/gogakoreli/elements-beta.git"
+    },
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
@@ -10,7 +28,7 @@
         "lint": "ng lint",
         "e2e": "ng e2e"
     },
-    "private": true,
+    "private": false,
     "dependencies": {
         "@angular/animations": "6.0.0-rc.4",
         "@angular/common": "6.0.0-rc.4",
